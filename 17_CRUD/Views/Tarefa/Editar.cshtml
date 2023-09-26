@@ -1,0 +1,20 @@
+@model Tarefa
+
+<h1>Editar Tarefa</h1>
+
+<form asp-action="Editar">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="Descricao">Descricao</label>
+        <input type="text" class="form-control" id="Descricao" name="Descricao" asp-for="Descricao" required>
+    </div>
+    <div class="form-group">
+        <label for="Concluida">Concluída</label>
+        <select class="form-control" id="Concluida" name="Concluida" asp-for="Concluida">
+            <option class="text-primary" value="true">Sim</option>
+            <option class="text-danger" value="false">Não</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-outline-info">Salvar</button>
+</form>
+<a class="btn btn-outline-primary" asp-action="Index">Voltar para a Lista</a>
